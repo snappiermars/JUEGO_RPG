@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuInicial : MonoBehaviour
 {
+    [SerializeField] private AudioClip clip;
 
+    public void AudioBoton(){
+        ControladorSonido.Instance.EjecutarSonido(clip);
+    }
     public void Jugar(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
