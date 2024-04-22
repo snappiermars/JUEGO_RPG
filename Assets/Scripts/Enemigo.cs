@@ -6,6 +6,7 @@ public class Enemigo : MonoBehaviour
 {
     public static int vidaEnemigo = 1;
     private float frecAtaque = 2.5f, tiempoSigAtaque = 0, iniciaConteo;
+    [SerializeField] private AudioClip clip;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class Enemigo : MonoBehaviour
             tiempoSigAtaque = frecAtaque;
             iniciaConteo = Time.time;
             obj.transform.GetComponentInChildren<VidasPlayer>().TomarDaño(1);
+            ControladorSonido.Instance.EjecutarSonido(clip);
         }
         
     }

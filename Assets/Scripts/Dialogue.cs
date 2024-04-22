@@ -9,6 +9,8 @@ public class DIalo : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4,6)] private string[] dialogueLines; 
+
+    [SerializeField] private AudioClip clip;
     
     private float typingTime = 0.1f;
     private bool isPlayerInRange;
@@ -21,6 +23,7 @@ public class DIalo : MonoBehaviour
         if(isPlayerInRange && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))){
             if(!didDialogueStart){
                 StartDialogue();
+                ControladorSonido.Instance.EjecutarSonido(clip);
             } else if(dialogueText.text == dialogueLines[lineIndex] ){
             NextDialogueLine();
             }else{
