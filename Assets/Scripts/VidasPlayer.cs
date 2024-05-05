@@ -23,6 +23,15 @@ public class VidasPlayer : MonoBehaviour
         gameOver.SetActive(false);
     }
 
+    public void Cura(int cura)
+    {
+        if (vida + cura > 5){
+            vida  = 5;
+        }else{
+            vida += cura;
+        }
+        DibujaVida(vida);
+    }
     public void TomarDaño(int daño)
     {
         if(vida > 0 && puedePerderVida == 1)
