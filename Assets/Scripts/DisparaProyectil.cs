@@ -5,28 +5,38 @@ using UnityEngine;
 public class DisparaProyectil : MonoBehaviour
 {
     [SerializeField] private float velocidad = 8.0f;
+    private Vector3 direccion;
 
-    
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        if  (CAD.dirDisparo == 1){
-            transform.position += new Vector3(0,-1,0) * Time.deltaTime * velocidad;
-        } else if (CAD.dirDisparo == 2){
-            transform.position += new Vector3(0,1,0) * Time.deltaTime * velocidad;
-        } else if (CAD.dirDisparo == 3){
-            transform.position += new Vector3(-1,0,0) * Time.deltaTime * velocidad;
-        }else if (CAD.dirDisparo == 4){
-            transform.position += new Vector3(1,0,0) * Time.deltaTime * velocidad;
+    private void Start() {
+        switch (CAD.dirDisparo) {
+            case 1:
+                direccion = Vector3.down;
+                break;
+            case 2:
+                direccion = Vector3.up;
+                break;
+            case 3:
+                direccion = Vector3.left;
+                break;
+            case 4:
+                direccion = Vector3.right;
+                break;
+            default:
+                direccion = Vector3.zero;
+                break;
         }
     }
 
+    // Update is called once per frame
+    void FixedUpdate() {
+        transform.position += direccion * Time.deltaTime * velocidad;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag == "limites"){
+        if (collision.gameObject.CompareTag("Limites")) {
             Destroy(this.gameObject);
         }
-        if (collision.gameObject.tag == "enemigo"){
+        if (collision.gameObject.CompareTag("Enemigo")) {
             collision.transform.GetComponent<Enemigo>().TomarDaño(1);
             Destroy(this.gameObject);
         }
