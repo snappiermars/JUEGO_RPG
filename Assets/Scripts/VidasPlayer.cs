@@ -11,7 +11,7 @@ public class VidasPlayer : MonoBehaviour
     public static int vida;
     private bool haMuerto;
     public GameObject gameOver;
-    private const int vidasINI = 5;
+    private const int vidasINI = 10;
     public static int puedePerderVida = 1;
 
 
@@ -25,8 +25,8 @@ public class VidasPlayer : MonoBehaviour
 
     public void Cura(int cura)
     {
-        if (vida + cura > 5){
-            vida  = 5;
+        if (vida + cura > vidasINI){
+            vida  = vidasINI;
         }else{
             vida += cura;
         }

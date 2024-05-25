@@ -12,7 +12,7 @@ public class Cura : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")){
-            other.transform.GetComponentInChildren<VidasPlayer>().Cura(1);
+            other.transform.GetComponentInChildren<VidasPlayer>().Cura(3);
             ControladorSonido.Instance.EjecutarSonido(clip);
             puntaje.SumarPuntos(cantidadPuntos);
             Destroy(gameObject);
