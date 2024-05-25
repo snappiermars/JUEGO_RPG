@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 24459090}
   m_Layer: 0
   m_Name: Rata1
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1036,6 +1036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3ba3cf54aa5de43bc2052619031d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaEnemigo: 1
   personaje: {fileID: 366632025}
   puntosRuta:
   - {fileID: 1092783923}
@@ -2719,7 +2720,7 @@ GameObject:
   - component: {fileID: 117337438}
   m_Layer: 0
   m_Name: Slime3
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2758,6 +2759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3ba3cf54aa5de43bc2052619031d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaEnemigo: 3
   personaje: {fileID: 366632025}
   puntosRuta:
   - {fileID: 823645371}
@@ -7984,7 +7986,7 @@ GameObject:
   - component: {fileID: 327167896}
   m_Layer: 0
   m_Name: Golem1
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8151,6 +8153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3ba3cf54aa5de43bc2052619031d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaEnemigo: 5
   personaje: {fileID: 366632025}
   puntosRuta:
   - {fileID: 436307663}
@@ -9200,6 +9203,7 @@ GameObject:
   - component: {fileID: 366632030}
   - component: {fileID: 366632031}
   - component: {fileID: 366632032}
+  - component: {fileID: 366632033}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -9370,7 +9374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e771e1118d6d14b4b9521aa30054db5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velMov: 8
+  velMov: 6
   rb: {fileID: 366632026}
   anim: {fileID: 366632028}
 --- !u!114 &366632030
@@ -9431,6 +9435,24 @@ MonoBehaviour:
   Activar_inv: 0
   Selector: {fileID: 1161077250}
   ID: 0
+--- !u!114 &366632033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366632023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d04f805ea61a7c469e584a67c2e743e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controladorGolpe: {fileID: 21490986}
+  radioGolpe: 0.3
+  "da\xF1oGolpe": 1
+  tiempoEntreAtaques: 1
+  tiempoSigAtaque: 1
+  clip: {fileID: 8300000, guid: 44822ddcd61dec4498590716679960f0, type: 3}
 --- !u!1 &370732540
 GameObject:
   m_ObjectHideFlags: 0
@@ -21279,7 +21301,7 @@ GameObject:
   - component: {fileID: 485634737}
   m_Layer: 0
   m_Name: Slime4
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21318,6 +21340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3ba3cf54aa5de43bc2052619031d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaEnemigo: 3
   personaje: {fileID: 366632025}
   puntosRuta:
   - {fileID: 892534353}
@@ -27583,7 +27606,7 @@ GameObject:
   - component: {fileID: 871237779}
   m_Layer: 0
   m_Name: Slime2
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27622,6 +27645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3ba3cf54aa5de43bc2052619031d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaEnemigo: 3
   personaje: {fileID: 366632025}
   puntosRuta:
   - {fileID: 316206509}
@@ -31157,7 +31181,7 @@ GameObject:
   - component: {fileID: 1069421059}
   m_Layer: 0
   m_Name: Rata3
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31196,6 +31220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3ba3cf54aa5de43bc2052619031d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaEnemigo: 1
   personaje: {fileID: 366632025}
   puntosRuta:
   - {fileID: 673408526}
@@ -32907,7 +32932,7 @@ GameObject:
   - component: {fileID: 1205801756}
   m_Layer: 0
   m_Name: Slime1
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33074,6 +33099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3ba3cf54aa5de43bc2052619031d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaEnemigo: 3
   personaje: {fileID: 366632025}
   puntosRuta:
   - {fileID: 2139597389}
@@ -39300,7 +39326,7 @@ GameObject:
   - component: {fileID: 1391896083}
   m_Layer: 0
   m_Name: Rata2
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39339,6 +39365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3ba3cf54aa5de43bc2052619031d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaEnemigo: 1
   personaje: {fileID: 366632025}
   puntosRuta:
   - {fileID: 708228765}
@@ -52295,7 +52322,7 @@ GameObject:
   - component: {fileID: 1903755632}
   m_Layer: 0
   m_Name: Golem2
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52312,6 +52339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3ba3cf54aa5de43bc2052619031d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaEnemigo: 5
   personaje: {fileID: 366632025}
   puntosRuta:
   - {fileID: 27323261}

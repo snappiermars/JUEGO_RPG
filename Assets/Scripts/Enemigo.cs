@@ -3,7 +3,8 @@ using UnityEngine.AI;
 
 public class Enemigo : MonoBehaviour
 {
-    public static int vidaEnemigo = 1;
+    [SerializeField] private int vidaEnemigo;
+    private Animator animator;
     private float frecAtaque = 2.5f, tiempoSigAtaque = 0, iniciaConteo;
 
     public Transform personaje;
@@ -24,7 +25,6 @@ public class Enemigo : MonoBehaviour
 
     void Start()
     {
-        vidaEnemigo = 1;
         agente.updateRotation = false;
         agente.updateUpAxis = false;
 
