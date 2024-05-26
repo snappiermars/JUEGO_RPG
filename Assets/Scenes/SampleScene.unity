@@ -5758,7 +5758,8 @@ MonoBehaviour:
   - 'Un momento no eres el flautista ...
 
     No hay flautista pero si plaga'
-  - Da igual, porque no ayudas matando algunas ratas
+  - Da igual, porque no ayudas matando algunas ratas y luego acabas con todos los
+    demas monstruos
   clip: {fileID: 8300000, guid: af763fa36bfa1ee46afe44febf06f91e, type: 3}
 --- !u!4 &199360724 stripped
 Transform:
@@ -50412,6 +50413,8 @@ MonoBehaviour:
   dialogueLines:
   - "\xA1Hola! Tal vez ya te hayas percatado\nhay monedas tiradas por todos lados"
   - La gente las dejo despues de ver tanto bicho en los alrededores
+  - "Tambien puedes encontrar otros objetos como ese ojo de ah\xED, chechalo en tu
+    inventario (E)"
   clip: {fileID: 8300000, guid: af763fa36bfa1ee46afe44febf06f91e, type: 3}
 --- !u!4 &1791415170 stripped
 Transform:
