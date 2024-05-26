@@ -120,7 +120,17 @@ public class Enemigo : MonoBehaviour
         vidaEnemigo -= daño;
         if (vidaEnemigo <= 0)
         {
-            Destroy(gameObject);
+            Morir();
         }
+    }
+
+   private void Morir()
+    {
+        // Notifica al contador de muertes
+        if (ContadorEnemigos.Instance != null)
+        {
+            ContadorEnemigos.Instance.ContarEnemigo(1);
+        }
+        Destroy(gameObject);
     }
 }
